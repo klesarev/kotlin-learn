@@ -29,15 +29,6 @@ dependencies {
     testImplementation ("org.junit.jupiter:junit-jupiter")
 
     implementation ("com.codeborne:selenide:6.9.0")
-
-    // Allure
-    testImplementation ("org.aspectj:aspectjweaver:1.9.9.1")
-    implementation ("io.qameta.allure:allure-junit5:${allureVersion}")
-    implementation ("io.qameta.allure:allure-assertj:${allureVersion}")
-    implementation ("io.qameta.allure:allure-rest-assured:${allureVersion}")
-    implementation ("io.qameta.allure:allure-java-commons:${allureVersion}")
-    implementation ("io.qameta.allure:allure-selenide:${allureVersion}")
-
 }
 
 tasks.test {
