@@ -110,7 +110,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.ObserverKt">
+  <component name="RunManager" selected="Kotlin.GenericLearnKt">
     <configuration name="BuilderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -180,8 +180,8 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BuilderKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="patterns.BuilderKt" />
+    <configuration name="GenericLearnKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="generics.GenericLearnKt" />
       <module name="KotlinLearn.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -196,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.GenericLearnKt" />
         <item itemvalue="Kotlin.ObserverKt" />
         <item itemvalue="Gradle.SingletonTest.singletonTest" />
         <item itemvalue="Gradle.BuilderTest" />
         <item itemvalue="Gradle.BuilderTest.builderTest" />
-        <item itemvalue="Kotlin.BuilderKt" />
       </list>
     </recent_temporary>
   </component>
