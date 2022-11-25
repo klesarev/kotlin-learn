@@ -1,9 +1,7 @@
 package android
 
 fun main(){
-    println(
-        factorialTwo(10).toList()
-    )
+
 }
 
 fun fibonacci(num: Int = 10): Sequence<Int> {
@@ -27,15 +25,5 @@ fun fib(num: Int): Int {
         list.add(start)
     }
     return list.last().first
-}
-
-fun factorialTwo(num: Int) = sequence<Int> {
-    var sum = 1
-    var result = 1
-    repeat (num) {
-        result *= sum
-        sum += 1
-        yield(result)
-    }
 }
 
