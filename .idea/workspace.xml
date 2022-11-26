@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85b18cc5-d524-4c7f-b139-9429a15f6deb" name="Changes" comment="" />
+    <list default="true" id="85b18cc5-d524-4c7f-b139-9429a15f6deb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/algorithms/Fibonacci.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/algorithms/Fibonacci.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,9 +114,16 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Kotlin.FibonacciKt">
     <configuration name="CallbackKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CallbackKt" />
+      <module name="KotlinLearn.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FibonacciKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="android.FibonacciKt" />
       <module name="KotlinLearn.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,20 +150,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ObserverKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="patterns.ObserverKt" />
-      <module name="KotlinLearn.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.FibonacciKt" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Kotlin.CallbackKt" />
         <item itemvalue="Kotlin.FizzBuzzKt" />
         <item itemvalue="Kotlin.GenericLearnKt" />
-        <item itemvalue="Kotlin.ObserverKt" />
       </list>
     </recent_temporary>
   </component>
