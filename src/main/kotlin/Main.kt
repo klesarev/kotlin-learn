@@ -3,11 +3,27 @@ import kotlin.random.Random
 import kotlin.reflect.KProperty
 
 fun main(args: Array<String>) {
+    val str = "keep calm and coding"
+
     println(
-        fib(10)
+        str.reverse()
     )
+
 }
 
+
+fun String.reverse(): String {
+    return this.mapIndexed { index, _ ->
+        this[(this.length - 1) - index]
+    }.joinToString("")
+}
+fun strReverse(text: String): String {
+    val size = text.length - 1
+
+    return text.mapIndexed { index, _ ->
+        text[size - index]
+    }.joinToString("")
+}
 
 fun fizzbuzz(n: Int): Any = when {
     n % 15 == 0 -> "FizzBuzz"
