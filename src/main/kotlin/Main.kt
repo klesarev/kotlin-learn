@@ -4,9 +4,10 @@ import kotlin.reflect.KProperty
 
 fun main(args: Array<String>) {
     println(
-        fib().take(10).toList().last().second
+        fib(10)
     )
 }
+
 
 fun fizzbuzz(n: Int): Any = when {
     n % 15 == 0 -> "FizzBuzz"
@@ -15,7 +16,7 @@ fun fizzbuzz(n: Int): Any = when {
     else -> n
 }
 
-fun fib() = generateSequence(Pair(0,1)) {
+fun fib(n: Int) = generateSequence(Pair(0,1)) {
     Pair(it.second, it.first + it.second)
-}
+}.take(n).toList().last().first
 
