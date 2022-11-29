@@ -24,7 +24,7 @@ class Rand<V>(private vararg val list: V) {
 ```
 Теперь накидаем тестовый класс для проверки работы
 ```kotlin
-class TestUser(val id: String ="delegate") {
+class TestUser {
     val age by Rand(16,23,45,true)
     val name by Rand("Sara", "Demi", "Julia")
 }
