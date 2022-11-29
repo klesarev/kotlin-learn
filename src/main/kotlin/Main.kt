@@ -1,16 +1,42 @@
 import java.util.regex.Pattern
+import javax.xml.crypto.Data
 import kotlin.random.Random
 import kotlin.reflect.KProperty
+import kotlin.test.assertEquals
 
 fun main(args: Array<String>) {
     val str = "keep calm and coding"
-
     println(
-        str.reverse()
+        Demo().classname()
     )
+}
+// тип Nothing вместо null моодет вернуть тип ошибки
 
+// Если же мы отметим класс ключевым словом data, метод equals()
+// будет переопределён автоматически. При этом работать будет точно также,
+// как и в примере выше: будет проверять на равенство
+// все значения, указанные в основном конструкторе.
+
+class Demo():User(), Classable {
+    override fun getName(): String {
+        return this::class.java.simpleName
+    }
+
+    override fun classname(): Any {
+        return this::class.java.simpleName
+    }
+}
+abstract class User (var tag: String="") {
+    abstract fun getName(): String
+
+    init {
+        tag = "new tag"
+    }
 }
 
+interface Classable {
+    fun classname(): Any
+}
 
 fun String.reverse(): String {
     return this.mapIndexed { index, _ ->
