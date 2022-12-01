@@ -19,9 +19,9 @@
 В это разделе лежит список самых распространненых задач, которые встречаются на
 собеседованиях. Материал основан как на личном опыте, так и на материалах из Интернета. 
 - [FizzBuzz](src/main/kotlin/algorithms/FizzBuzz.kt)
-- [Повторяющиеся элементы из списка](src/main/kotlin/interview#повторяющиеся-элементы-из-списка)
-- [Количество повторений в строке](src/main/kotlin/interview#количество-повторений-в-строке)
-- [Реверс (переворот строки)](src/main/kotlin/interview#переворот-строки)
+- [Повторяющиеся элементы из списка](https://github.com/klesarev/kotlin-learn/tree/master/src/main/kotlin/interview#повторяющиеся-элементы-из-списка)
+- [Количество повторений в строке](https://github.com/klesarev/kotlin-learn/tree/master/src/main/kotlin/interview#количество-повторений-в-строке)
+- [Реверс (переворот строки)](https://github.com/klesarev/kotlin-learn/tree/master/src/main/kotlin/interview#переворот-строки)
 
 ### QA Kotlin recipes
 - [Allure](src/main/kotlin/qa/Allure.kt)
