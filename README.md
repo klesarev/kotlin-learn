@@ -20,7 +20,7 @@
 собеседованиях. Материал основан как на личном опыте, так и на материалах из Интернета. 
 - [FizzBuzz](src/main/kotlin/algorithms/FizzBuzz.kt)
 - [Повторяющиеся элементы из списка](src/main/kotlin/interview/README.md)
-- [Количество повторений в строке](src/main/kotlin/interview/README.md)
+- [Количество повторений в строке](https://github.com/klesarev/kotlin-learn/tree/master/src/main/kotlin/interview#количество-повторений-в-строке)
 - [Реверс (переворот строки)](src/main/kotlin/interview/README.md)
 
 ### QA Kotlin recipes
