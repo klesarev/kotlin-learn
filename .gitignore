@@ -1,3 +1,9 @@
 
 
 build/
+
+# IntelliJ Files
+.idea/
+*.iml
+*.iws
+*.ipr
