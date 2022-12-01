@@ -31,5 +31,5 @@
 
 По вопросам и предложениям пишите в telegram - [@foxcode85](https://t.me/foxcode85)
 
-[link_path]: https://github.com/klesarev/kotlin-learn/tree/master/src
+[link path]: https://github.com/klesarev/kotlin-learn/tree/master/src
 
