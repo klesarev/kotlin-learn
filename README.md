@@ -24,7 +24,7 @@
 - [Реверс (переворот строки)](https://github.com/klesarev/kotlin-learn/tree/master/src/main/kotlin/interview#переворот-строки)
 
 ### QA Kotlin recipes
-- [Allure][id](src/main/kotlin/qa/Allure.kt)
+- [Allure](src/main/kotlin/qa/Allure.kt)
 - [RestAssured](src/main/kotlin/qa/RestAssured.kt)
 ### Вопросы c собеседования
 Список вопросов будет лежать в отдельном файле для удобства...  
