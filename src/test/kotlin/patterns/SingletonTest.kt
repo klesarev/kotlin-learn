@@ -2,6 +2,7 @@ package patterns
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import steps.step
 
 class SingletonTest {
 
@@ -10,7 +11,9 @@ class SingletonTest {
         val obj1 = Singleton
         val obj2 = Singleton
 
-        Assertions.assertEquals(obj1,obj2)
+        step("сравниваем объекты"){
+            Assertions.assertEquals(obj1,obj2)
+        }
     }
 
 }
