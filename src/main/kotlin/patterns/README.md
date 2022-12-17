@@ -45,7 +45,7 @@ text will be soon...
 coming soon...
 
 #### Kotlin sealed class Factory
-Классическая Фабрика конечно хороша, но реализация при помощи sealed-классов интереснее.  
+Классическая Фабрика конечно хороша, но реализация при помощи sealed-классов/интерфейса интереснее.  
 
 Разберем на простом примере. Создадим фабрику, которая будет возвращать разные классы баз данных, 
 в зависимости от переданных параметров. Для чего это нужно? К примеру, в проекте используется несколько баз-данных и 
@@ -65,7 +65,7 @@ interface Database {
 data class MySql(override val config: MySqlConfig): Database
 class MongoDB(override val config: MongoDBConfig): Database
 ```
-Отлично, теперь время для sealed интерфейса с конфигурацией наших баз. Конечно, вместо sealed interface
+Теперь sealed интерфейс с конфигурацией. Вместо sealed interface
 можно использовать sealed class. Документация по ним [лежит тут](https://kotlinlang.org/docs/sealed-classes.html#sealed-classes-and-when-expression)
 ```kotlin
 sealed interface DBConfig {
