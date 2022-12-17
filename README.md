@@ -26,6 +26,7 @@
 ### QA Kotlin recipes
 - [Allure](src/main/kotlin/qa/Allure.kt)
 - [RestAssured](src/main/kotlin/qa/RestAssured.kt)
+- [Appium](src/main/kotlin/qa/appium)
 ### Вопросы c собеседования
 Список вопросов будет лежать в отдельном файле для удобства...  
 

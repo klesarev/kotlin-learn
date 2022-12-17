@@ -31,6 +31,52 @@ public class Singleton {
 ### Observer
 text will be soon...
 
+### Factory
+Фабрика — это порождающий паттерн проектирования, который определяет общий интерфейс 
+для создания объектов в суперклассе, позволяя подклассам изменять тип создаваемых объектов.
+
+В отличие от java, kotlin позволяет немного прокачать ее, благодаря sealed классам и 
+меньшему объему кода. 
+
+Ниже мы рассмотрим 3 примера реализации паттерна "Фабрика" - классический, с sealed-классами и 
+со статическим методом.
+
+#### Kotlin classic Factory
+coming soon...
+
+#### Kotlin sealed class Factory
+coming soon...
+
+#### Kotlin Factory Static Method
+Еще один способ создать фабрику при помощи Kotlin. Данный фабричный метод возвращает 
+объект с настройками, в зависимости от тега - chrome, firefox.
+
+В отличие от классической реализации (java-style) отличается лаконичностью, м лучшей 
+читаемостью.
+```kotlin
+// Static Method
+class StaticFactory private constructor(){
+    companion object {
+        fun getOption(tag: String, vararg opts: String = arrayOf("")): AbstractDriverOptions<*> {
+            return when (tag.lowercase()) {
+                "chrome" -> ChromeOptions().addArguments(opts.toList())
+                "firefox" -> FirefoxOptions().addArguments(opts.toList())
+                else -> error("incorrect select tag")
+            }
+        }
+    }
+}
+```
+Итак, в примере выше видим, что у нас ограничен доступ к конструктору StaticFactory при помощи _**private constructor()**,_ так как
+нам не нужно создавать много экземпляров класса. Это своего рода микс singleton + factory.
+
+В классе StaticFactory у нас есть companion object, который содержит всего 1 метод - _getOption(),_ 
+возвращающий в зависимости от переданного в него тега объект с настройками, 
+которые мы передаем в виде набора строк вторым параметром - _vararg opts: String = arrayOf("")_.
+ По умолчанию массив со строками пуст. В случае, если мы передадим некорректный тег - метод вернет нам
+объект Nothing.
+
+
 ### State
 Паттерн State? или Состояние - это поведенческий паттерн проектирования,
 который позволяет объектам менять поведение
