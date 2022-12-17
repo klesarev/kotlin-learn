@@ -10,6 +10,7 @@
 - [Builder (Строитель)](src/main/kotlin/patterns/Builder.kt)
 - [Observer (Наблюдатель)](src/main/kotlin/patterns/Observer.kt)
 - [State (Состояние)](src/main/kotlin/patterns/State.kt)
+- [Factory(Фабрика)](src/main/kotlin/patterns/Factory.kt)
 
 ### Алгоритмы
 - [Числа Фибоначчи](src/main/kotlin/algorithms/Fibonacci.kt)
