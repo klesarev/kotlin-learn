@@ -5,32 +5,49 @@ import org.openqa.selenium.firefox.FirefoxOptions
 import org.openqa.selenium.remote.AbstractDriverOptions
 
 fun main(){
-    val db = Database.MySql(MySqlConfig())
+    val db = DatabaseFactory.create(
+        MySqlConfig(port = 4371, host = "192.168.1.1", params = mapOf(
+            "name" to "SQL Base"
+        ))
+    )
+
+    println(db)
 }
 
 // Sealed class + Factory
-abstract class DatabaseConfig()
-class MySqlConfig(
-    val port: Int = 8080,
-    val schema: String = "sql",
-) : DatabaseConfig()
-class MongoDBConfig(
-    val port: Int = 8080,
-    val path: String = "/bin"
-): DatabaseConfig()
+interface Database {
+    val config: DBConfig
+}
 
+data class MySql(override val config: MySqlConfig): Database
+class MongoDB(override val config: MongoDBConfig): Database
 
-sealed class Database(val config: DatabaseConfig) {
-    class MySql(config: MySqlConfig): Database(config)
-    class MongoDB(config: MongoDBConfig): Database(config)
+sealed interface DBConfig {
+    val params: Map<String, Any>
+    val host: String get() = Default.host
+    val port: Int get() = Default.port
+    companion object Default {
+        const val host: String = "8.8.8.8"
+        const val port: Int = 8080
+    }
+}
+data class MySqlConfig(
+    override val host: String = DBConfig.host,
+    override val port: Int = DBConfig.port,
+    override val params: Map<String, Any>
+): DBConfig
+class MongoDBConfig (
+    override val host: String = DBConfig.host,
+    override val port: Int = DBConfig.port,
+    override val params: Map<String, Any>
+): DBConfig
 
-    companion object {
-        fun of(config: DatabaseConfig): Database {
-            return when(config) {
-                is MySqlConfig -> MySql(config)
-                is MongoDBConfig -> MongoDB(config)
-                else -> error("error")
-            }
+object DatabaseFactory {
+    fun create(config: DBConfig): Database {
+        return when(config) {
+            is MySqlConfig -> MySql(config)
+            is MongoDBConfig -> MongoDB(config)
+            else -> error("error")
         }
     }
 }
