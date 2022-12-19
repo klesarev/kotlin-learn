@@ -43,6 +43,39 @@ text will be soon...
 
 ### Kotlin classic Factory
 coming soon...
+```kotlin
+interface ICurrency {
+    val symbol: String get() = ""
+    val code: String get() = ""
+}
+
+data class Euro(
+    override val symbol: String = "€",
+    override val code: String = "EUR"
+): ICurrency
+
+data class UnitedStatesDollar(
+    override val symbol: String = "$",
+    override val code: String = "USD"
+): ICurrency
+
+enum class Country {
+    UnitedStates, Spain, UK, Greece
+}
+
+class CurrencyFactory private constructor(){
+    companion object {
+        fun create(country: Country): ICurrency {
+            return when (country) {
+                Country.Spain, Country.Greece -> Euro()
+                Country.UnitedStates -> UnitedStatesDollar()
+                else -> error("enter the currency code")
+            }
+        }
+    }
+}
+```
+
 
 ### Kotlin sealed class Factory
 Классическая Фабрика конечно хороша, но реализация при помощи sealed-классов/интерфейса интереснее.  
